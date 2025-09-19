@@ -4,7 +4,7 @@ import numpy as np
 from PIL import Image
 from skimage.feature import hog
 
-st.title("Alzheimer's Detection App (SVM + HOG)")
+st.title("Alzheimer's Detection (SVM+HOG)")
 
 # Load model and metadata
 @st.cache_resource
@@ -39,3 +39,4 @@ if uploaded_file:
     pred = model.predict(feat)[0]           # Get numeric prediction
     pred_label = classes[pred]              # ✅ Map to class name
     st.success(f"Prediction: {pred_label}")
+
