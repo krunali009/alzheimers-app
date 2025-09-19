@@ -30,7 +30,7 @@ def extract_features(img_array):
 
 if uploaded_file:
     image = Image.open(uploaded_file)
-    st.image(image, caption="Uploaded Image", use_column_width=True)
+    st.image(image, caption="Uploaded Image", use_container_width=True)  # ✅ fixed here
 
     arr = preprocess(image)
     feat = extract_features(arr).reshape(1, -1)
